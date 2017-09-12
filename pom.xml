@@ -73,6 +73,22 @@
   </build>
 
   <distributionManagement>
+    <repository>
+      <id>swoop.public_release</id>
+      <url>s3://swoop-maven/public-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>swoop.snapshot</id>
+      <url>s3://swoop-maven/snapshot</url>
+    </snapshotRepository>
+    <site>
+      <id>swoop.site</id>
+      <url>s3://swoop-maven/site</url>
+    </site>
+  </distributionManagement>
+
+
+  <distributionManagement>
     <site>
       <id>swoop.site</id>
       <url>s3://swoop-maven/site</url>

@@ -54,7 +54,7 @@ before_script:
 after_success:
   # Maven deployments will always happen, but commits to anywhere other than
   # the designated release branch will be snapshot releases.
-  - mvn -DskipTests=true deploy
+  - mvn -DskipTests=true deploy >/dev/null
 
   # Where the deployment actually happens. Will only deploy off the specified
   # branch, and tag the version in Github
