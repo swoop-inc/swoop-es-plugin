@@ -87,22 +87,6 @@
     </site>
   </distributionManagement>
 
-
-  <distributionManagement>
-    <site>
-      <id>swoop.site</id>
-      <url>s3://swoop-maven/site</url>
-    </site>
-    <repository>
-      <id>swoop.release</id>
-      <url>s3://swoop-maven/release</url>
-    </repository>
-    <snapshotRepository>
-      <id>swoop.snapshot</id>
-      <url>s3://swoop-maven/snapshot</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.elasticsearch</groupId>
