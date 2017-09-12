@@ -48,19 +48,19 @@ before_script:
       else mvn versions:set -DnewVersion=${SWOOP_PROJECT_VERSION}-SNAPSHOT
     fi
 
-# after_success:
+after_success:
   # Maven deployments will always happen, but commits to anywhere other than
   # the designated release branch will be snapshot releases.
-  # - mvn -DskipTests=true deploy
+  - mvn -DskipTests=true deploy
 
   # Where the deployment actually happens. Will only deploy off the specified
   # branch, and tag the version in Github
-  # - >
-  #   [ ${TRAVIS_PULL_REQUEST} = 'false' -a ${TRAVIS_BRANCH} = ${SWOOP_RELEASE_BRANCH} ] &&
-  #   curl -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${GITHUB_TOKEN}" -X POST "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases" -d '{
-  #     "tag_name": "v'"${SWOOP_PROJECT_VERSION}"'",
-  #     "target_commitish": "'"${TRAVIS_COMMIT}"'",
-  #     "name": "v'"${SWOOP_PROJECT_VERSION}"'",
-  #     "body": "https://travis-ci.org/'"${TRAVIS_REPO_SLUG}"'/builds/'"${TRAVIS_BUILD_ID}"'",
-  #     "prerelease": false
-  #   }'
+  - >
+    [ ${TRAVIS_PULL_REQUEST} = 'false' -a ${TRAVIS_BRANCH} = ${SWOOP_RELEASE_BRANCH} ] &&
+    curl -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${GITHUB_TOKEN}" -X POST "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases" -d '{
+      "tag_name": "v'"${SWOOP_PROJECT_VERSION}"'",
+      "target_commitish": "'"${TRAVIS_COMMIT}"'",
+      "name": "v'"${SWOOP_PROJECT_VERSION}"'",
+      "body": "https://travis-ci.org/'"${TRAVIS_REPO_SLUG}"'/builds/'"${TRAVIS_BUILD_ID}"'",
+      "prerelease": false
+    }'
