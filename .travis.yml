@@ -1,0 +1,61 @@
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - curl
+    - python-pip
+    - oracle-java8-installer
+
+language: java
+
+jdk:
+  - oraclejdk8
+
+cache:
+  directories:
+    - $HOME/.m2
+
+# Don't build branches/tags that match this regex. It's the convention used
+# for tagging releases, which should be already tested before tagging.
+branches:
+  except:
+    - /^v[0-9]/
+
+env:
+  global:
+    # These should track with the elasticsearch version
+    - MAJOR_VERSION=5
+    - MINOR_VERSION=5
+    - PATCH_VERSION=2
+    - SWOOP_RELEASE_BRANCH=master
+    - PADDED_TRAVIS_BUILD_NUMBER=$(printf "%03d" $TRAVIS_BUILD_NUMBER)
+    - SWOOP_PROJECT_VERSION="$MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION-swoop$PADDED_TRAVIS_BUILD_NUMBER"
+
+before_install:
+  - wget https://s3.amazonaws.com/swoop-maven/settings.xml -O $HOME/.m2/settings.xml
+
+# Set the Maven version to have the minor version be the Travis build number
+before_script:
+  - >
+    if [ ${TRAVIS_BRANCH} = ${SWOOP_RELEASE_BRANCH} ]
+      then mvn versions:set -DnewVersion=${SWOOP_PROJECT_VERSION}
+      else mvn versions:set -DnewVersion=${SWOOP_PROJECT_VERSION}-SNAPSHOT
+    fi
+
+# after_success:
+  # Maven deployments will always happen, but commits to anywhere other than
+  # the designated release branch will be snapshot releases.
+  # - mvn -DskipTests=true deploy
+
+  # Where the deployment actually happens. Will only deploy off the specified
+  # branch, and tag the version in Github
+  # - >
+  #   [ ${TRAVIS_PULL_REQUEST} = 'false' -a ${TRAVIS_BRANCH} = ${SWOOP_RELEASE_BRANCH} ] &&
+  #   curl -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${GITHUB_TOKEN}" -X POST "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases" -d '{
+  #     "tag_name": "v'"${SWOOP_PROJECT_VERSION}"'",
+  #     "target_commitish": "'"${TRAVIS_COMMIT}"'",
+  #     "name": "v'"${SWOOP_PROJECT_VERSION}"'",
+  #     "body": "https://travis-ci.org/'"${TRAVIS_REPO_SLUG}"'/builds/'"${TRAVIS_BUILD_ID}"'",
+  #     "prerelease": false
+  #   }'
