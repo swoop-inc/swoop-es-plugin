@@ -24,6 +24,7 @@ branches:
 
 env:
   global:
+    - SWOOP_PROJECT_NAME=swoop-es-plugin
     # These should track with the elasticsearch version
     - MAJOR_VERSION=5
     - MINOR_VERSION=5
@@ -37,8 +38,8 @@ env:
 
     - secure: "RYYhu5QLgQgqD0ac3SOLujhqXmFYk9/Tn0GUAYmtPPOmdE4EnhnBHV5IGTE2YpWlbOkE5tC1MMuhfLAwT6c8lnTp8Zp092KRpq467iWPru+JAbAmTt74XUsFtw0cYX+KNIgLIOag17iXLGQ/cwohPRKObVn6nZ8V2PFwfAxjueY6O1iiRLYUvB01DrfPLArV2LXPGb3NEKxovvk5lS8p9Q1nvNv3epLZ/j0mELGCCyq0nBFZVQ5FKreNiw0ZdnsxKvj625PaYrVWMlwH2uXUsHw1pzCBBddbuxTE1F3sBECoHIUVTRcj+ExNUO8OCI3CZfIYHyrXUBNM85iDlnpFTWzl3MyaZVIRMPwUy8YsqjLs8jZRepNbbEJLJKZ6A7coeo5uJWoP2qBZaw893g8T8CymNToqKzTBV6N1GkDIhZ0zbKU0mAh9tYR9I2w3I3OZQKNdV+ede26WP3BlTz6HfkOxdYxzfepx6l3tYaCGiX37Nvp0LvkooDU22wNY0fHkP60Le55WvHCf2rywafOOHu4nhDJOsTOu3P+FI+vmHyseBJdDSIKHvE12S9t2WR1S6ZUn+jTSKldYPalHm6jFsx0ZaCB3mOi4bGKe9AvcbpUPXEZ4Gn30/tDaWfW/1F8GzyStyGAX56/EBVR9/WoXiQBxs/r76jkFjMNUM5mujLQ="
 
-    - secure: "Wh4GPVGwZ3F2xPA60QCjsXnW+B/x0fWA2zBuQZBC3HwrSr0pWQpqK0SWCsdXCHRteyM/lA2fRIP5E2ig8r8rfAWY8o4yVXbSCofvlhSbNXtf+ee68vmRKjpWw2jQ2gaCOnGAVlvFoUvOIiM/PNB7KkT0ku07cH4oyewYvYnkIrtvaIxSWUlI3NW6XFagG5K/hu2KywIUNIMqDtGwvIRCDj+fG6DXQ8o5vLRpIn/Vr+T1YCtqUcVRN3RY/8YcHXcX0TpgGtPDyY9vw21zWbdWVRBjVFLSm6tC3is5/j9ngF0VHkUltQYigXDYKOIGSmeIWcjjGSYpVC6pc64vIxfB7VZv+lG6eaBqdVIkUSDZSQtA1jD4+TACFUCGh7JjXGFvPFgqUe2kEqhBtLcij6f9a7CinfYwJyNbqK4js6M+SFngEGe+Q//G7huwWIOiiy40cYb8fPwIkxYLR01eDnYau54A5bwn56gmQl2SgqIOPOEkEdvVeziMPfjr2oySamDdDdqKO01mUrsvNbiNg1iLxc4R9Nz266W6Yu0uwlQSXVaPdLSZKiKVWkShd1XxnjwQ8tiX3llNip/iHFwpYJIWyd9zof8U0YhZi92LpReCmmKBXrdr9wyYnrtapckHZJDc4oTTjT3tGW/Z3oXXWF9lR3wxm3Qy05n1UoHiLuqRdN8="
-    - secure: "iXC0TQoKWZ7zdQkD+BvUzFDUPfXklsxdMPxDpMFF/OKYK9KHDG7LRB62JayZ2hm2vv7MmC+Ge1fN6DrjjPGOT88vuJ5QsPtzjrkJTrWExcCVKT5/Hz/Tskdqsj1lC9TNaHMDZtHe6+zjtKMgFQ8x3C536lq76qLAVWmRhJ1TmuQSwD7v+J4pXz0ki0gUdgc6vv/0kKc+HWZl/7ZdQlyKomAI+TyaCTdlN6XVlsZ7brZx+m7z8h+1vYFzI1j2I4kVhkCpO4aRP36QFp2YqWZ2KekERoRUk/RPl7RbWs9VFwIMl4vXgKidmI2lt+lmyLvppatbe99JCiQGB9VX3SgP56vt6h9AEagcPHMtbOHbqJVlLvJIgqxw9ddM/ROF2u5qSzZWDqIs1+h8V6Dwvpsw609eieKzB86PiHek4+0IAyhk410Bz9vgS/pX5CShUi8ZrHdVt/THg8BQVqhWF+iqDzkdTtPepgm4W8H5EIGJ0iYG/mm2OTIpPOT+/wiIJTb3RQFqDr+562TvxkIZg/qRCJG/tcDgdunc7Gl+uV/sBVGjjJZLPcf3l1Lu9sXL0v6odQdBWBh8iF9EronC9ZsuysIB6jv6eh1i0xwkml2HkiXYi+HdWABrcq7ACHqSnF/1eaEHIsJBi5o08FQUjeV6yVw05zGrJMeA17S/1wjFmHA="
+    - secure: "YVTcmGlMz2poKUkF9K8itPk2mb9aFvLZnZJFi/ZFdp8bkCOPQYUZKtJbGtNrmHQ9qmkQ9dO39fa4o4hqgAd6oC97B7QfYyZ+xxQyoyc8pjksIdEV5xpO/LNFF/KhOq8LOtXeXDKgAzMcW1/Nwf+BR0TIm71W8C5iQrEflQLSWvTFnJT5rlPeLzS6XIAtEzC0eZ2r8PNS94er+Uf5ePu2Iskn5z70Xa2MX6Abhb7jYpAhecdcwnXHcW4TpKdQf184Cv6rhrpxq5tS/2KfpEuKWYMJFmkVAM4lwzNtaiRknd5kq6pv/giHN/16dp7AanwP2aTSqzaFeyY/QvqfIZQZExpdfD8JDHlatVUfS06XEWNP8jhF/9e90qos+vHxRsXxys9jDQOdI0abE6ZkrQ1vsfzOSrH6nxhXOvLvvSBj0DKxYYs02cHviB/VzK+61yIA2XHhVtdIlyH/DxKEM7X+RdwF4+vL/GOp68ytUngzhMXds9nSPyBRQbOiWrmkn5yc1QAIKBEqETPUki32zPIJFz7FefGqtEjxGF1s/lQDdZUjCyYSYe03ljP8loCT1NuGsgmOXnoItCJXjXeG08zhWjbAOoApJe4j7VgTTqcOLyiqlEyzVFJyetV1bD7hP78l7SoUFMUDz2KH4fKCNZIgdRXIw489X9/0E3hjgYdbtT4="
+    - secure: "EXvZhK7GP+HblhRdtYIhhm0+jc/nI7oA6P6yXyAp02lemkm7QBqPbZJimnamOyXPryX7pRacEKJZDxtaGEscirAWMlthwKatPqliWnq3I+hKsArAEgVJ6VGfD1AkFvOQ8PiS8k/GxZy/ZurKF+5/MohjyAnuU4zuzkzmFFU4peE9NfxYygUcK4FWVR9kiOyTF0BH4UWAga81DHi7ggvUylBDAD4fhSt0h0yRViJOKPORhEcdRyV2ZyGCV1v/vRXbpiH7rRtsGRkO0k7Dc8UxeHTt1keP5omnt5ZR6xsA6igUjDdLDveSXlBXAnnr48mT6YU2Qujfan+2hu4WXhR0BbXRQxOtrPidBI4W2EnnP3K2m6vBvqoa5AfBLNqfnNXIhdhk4UzgpAFVon/GXCZeYpCfqpCc74y14vRFR6rjjRIFHrg+209V0AJR4CXNrw1vQbrJyHOWqgfDNxXY/ZYgmDrLcg8hV5DC5Qvkt//BqddJ0HS5vJy9hW73n0jXj68ujWnWEji4hEllGTVh68fPw6mqZOG6+8f3vrnFKh+QyLCRV9e3Qv/dXMLFN39ynJwpvHYAqqOW4dO3OetTpkzYDHLK7cDtqI55llj6pn0xHcOTLgCVXmpNu5iEo0MPfQvjo0pltz4Jc8HR5okhKSmQr0zvy7RQ/tPXEZgFr3d5lGE="
 
 before_install:
   - wget https://s3.amazonaws.com/swoop-maven/settings.xml -O $HOME/.m2/settings.xml
@@ -66,4 +67,7 @@ after_success:
       "name": "v'"${SWOOP_PROJECT_VERSION}"'",
       "body": "https://travis-ci.org/'"${TRAVIS_REPO_SLUG}"'/builds/'"${TRAVIS_BUILD_ID}"'",
       "prerelease": false
-    }'
+    }' &&
+    echo "${SWOOP_PROJECT_VERSION}" > /tmp/${SWOOP_PROJECT_NAME}-VERSION &&
+    pip install --user --upgrade pip awscli &&
+    aws s3api put-object --bucket swoop-deploy --key releases/${SWOOP_PROJECT_NAME} --content-type text/plain --acl public-read --body /tmp/${SWOOP_PROJECT_NAME}-VERSION
