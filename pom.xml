@@ -11,13 +11,13 @@
   </parent>
 
   <artifactId>swoop-es-plugin</artifactId>
-  <version>5.5.2-swoop000-SNAPSHOT</version>
+  <version>5.6.1-swoop000-SNAPSHOT</version>
   <name>Swoop ES Plugin</name>
   <description>Swoop's custom plugin for Elasticsearch</description>
   <url>https://github.com/swoop-inc/swoop-es-plugin</url>
 
   <properties>
-    <elasticsearch.version>5.5.2</elasticsearch.version>
+    <elasticsearch.version>5.6.1</elasticsearch.version>
   </properties>
 
   <build>

@@ -27,8 +27,8 @@ env:
     - SWOOP_PROJECT_NAME=swoop-es-plugin
     # These should track with the elasticsearch version
     - MAJOR_VERSION=5
-    - MINOR_VERSION=5
-    - PATCH_VERSION=2
+    - MINOR_VERSION=6
+    - PATCH_VERSION=1
     - SWOOP_RELEASE_BRANCH=master
     - PADDED_TRAVIS_BUILD_NUMBER=$(printf "%03d" $TRAVIS_BUILD_NUMBER)
     - SWOOP_PROJECT_VERSION="$MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION-swoop$PADDED_TRAVIS_BUILD_NUMBER"
